@@ -1,0 +1,12 @@
+{% comment %} <p> filters </p> {% endcomment %}
+{% comment %} 
+// filters
+<h1>hello {{name | capfirst}}</h1> // capitalizes the first letter
+<h1>hello {{name | default:"not found"}}</h1>  // provides a default value if `name` is not set or is an empty string
+<h1>hello {{name | slice:":3"}}</h1> // slices the variable `name` to the first three characters.
+<h1>hello {{name | length}}</h1> // returns the length of the variable `name`
+<h1>hello {{name | add:" 🐅" }}</h1> // adds the specified string
+<h1>hello {{name | cut:" " }}</h1> // removes all occurrences of the specified string (in this case, a space)
+<h1>hello {{name | cut:"y" }}</h1> // removes all occurrences of the specified character (in this case, 'y')
+<h1>hello {{ filesize | filesizeformat }}</h1>
+{% endcomment %}

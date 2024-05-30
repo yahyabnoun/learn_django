@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+<body>
+    {% comment %} 
+    {% extends "testColor.html" %} // tag indicates that this template inherits from the "testColor.html" template.
+    {% endcomment %} 
+
+    {% comment %} {% include "base/filters.html" %} {% endcomment %}
+
+    {% comment %} {% include "base/Statements.html" %} {% endcomment %}
+
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style.css'%}">
+    {% comment %} <img src="{% static 'images/0.jpg'%}" alt="Girl in a jacket" width="500" height="600"> {% endcomment %}
+
+    {% include "base/navbar.html" %}
+
+</body>
+</html>
