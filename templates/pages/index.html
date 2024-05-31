@@ -18,8 +18,11 @@
     {% load static %}
     <link rel="stylesheet" href="{% static 'css/style.css'%}">
     {% comment %} <img src="{% static 'images/0.jpg'%}" alt="Girl in a jacket" width="500" height="600"> {% endcomment %}
-
     {% include "base/navbar.html" %}
+
+    {% block content %}{% endblock %}
+
+
 
 </body>
 </html>
