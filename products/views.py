@@ -6,7 +6,8 @@ from .models import Product
 def products(request):
     objectproducts = Product.objects
     # products = {"products":objectproducts.filter(name__contains="x")}
-    products = {"products":objectproducts.filter(name__contains="x")}
+    # products = {"products":objectproducts.filter(price__in=[2,10])}
+    products = {"products":objectproducts.filter(price__range=(2,100))}
     return render(request, "pages/products/products.html", products)
 
 def product(request):
