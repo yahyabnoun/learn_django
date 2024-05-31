@@ -1,0 +1,23 @@
+{% extends "pages/index.html" %}
+
+{% block content %}
+
+<h1> from page </h1>
+
+<form method="POST">
+    {% csrf_token %}
+    <label for="">Email</label>
+    <input name="email" type="text">
+
+    <br>
+
+    <label for="">Password</label>
+    <input name="password" type="password">
+
+    <br>
+
+    <input type="submit" value="submit">
+
+</form>
+
+{% endblock %}

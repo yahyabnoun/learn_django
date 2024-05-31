@@ -6,3 +6,9 @@ def index(request):
 
 def aboutPage(request):
     return render(request,"pages/about.html")
+
+def fromPage(request):
+    print(request.POST.get("email"))
+
+
+    return render(request,"pages/form.html")
