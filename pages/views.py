@@ -9,6 +9,8 @@ def aboutPage(request):
 
 def fromPage(request):
     print(request.POST.get("email"))
+    email = request.POST.get("email")
+    password = request.POST.get("password")
 
-
+    
     return render(request,"pages/form.html")
