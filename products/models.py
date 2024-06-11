@@ -32,6 +32,6 @@ class Video(models.Model):
 class User(models.Model):
     name = models.CharField(max_length=150)
     # products = models.ForeignKey(Product, on_delete=models.CASCADE) // one to many every user can have multi products
-    videos = models.ManyToManyField(Video, null=True)
+    videos = models.ManyToManyField(Video)
     def __str__(self):
         return self.name
